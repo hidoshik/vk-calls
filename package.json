@@ -1,0 +1,26 @@
+{
+  "name": "vk-calls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:focus": "playwright test -g"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hidoshik/vk-calls.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hidoshik/vk-calls/issues"
+  },
+  "homepage": "https://github.com/hidoshik/vk-calls#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "typescript": "^5.8.3"
+  }
+}
