@@ -54,7 +54,8 @@ test.describe("Valid Guest Calls login tests @video @audio", () => {
     // Тест падает! Баг
     await guestPage.clickReturn();
     await guestPage.errorAlert.waitFor({ state: "visible" });
-    await expect(guestPage.errorAlert).not.toBeVisible();
+    const isVisible = await guestPage.errorAlert.isVisible();
+    await expect(isVisible).toBeFalsy();
   });
 
   test("Guest user should be able to leave the call without errors", async () => {
@@ -62,7 +63,8 @@ test.describe("Valid Guest Calls login tests @video @audio", () => {
     await guestPage.clickJoinCall();
     await guestPage.clickLeaveCall();
     await guestPage.errorAlert.waitFor({ state: "visible" });
-    await expect(guestPage.errorAlert).not.toBeVisible();
+    const isVisible = await guestPage.errorAlert.isVisible();
+    await expect(isVisible).toBeFalsy();
   });
 });
 
